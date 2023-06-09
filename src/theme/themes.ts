@@ -1,21 +1,37 @@
+// import "@mui/material/styles/createPalette";
+
 import { ThemeOptions, useTheme } from "@mui/material";
-import { deepOrange, lightBlue } from "@mui/material/colors";
 import { createMakeAndWithStyles } from "tss-react";
 
 import { makeMuiCache } from "./cache";
+import * as components from "./components";
+import palette from "./palette";
+import { createSpacing } from "./spacing";
+import typography from "./typography";
+
+declare module "@mui/material/styles/createPalette" {
+  interface Palette {
+    inverse: Palette["primary"];
+  }
+  interface PaletteOptions {
+    inverse: PaletteOptions["primary"];
+  }
+}
+
+// Extend color prop on components
+declare module "@mui/material/Button" {
+  export interface ButtonPropsColorOverrides {
+    inverse: true;
+  }
+}
 
 export const darkTheme: ThemeOptions = {
-  palette: {
-    mode: "dark",
-    primary: {
-      main: lightBlue[800],
-      contrastText: lightBlue[900],
-    },
-    secondary: {
-      main: deepOrange[800],
-      contrastText: deepOrange[900],
-    },
+  components: {
+    ...components,
   },
+  palette,
+  spacing: createSpacing,
+  typography,
 };
 
 export const muiCache = makeMuiCache();

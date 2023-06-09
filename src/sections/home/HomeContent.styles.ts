@@ -4,12 +4,59 @@ import { makeStyles } from "../../theme/themes";
 
 const useStyles = makeStyles()((theme: Theme) => ({
   mainContainer: {
-    minHeight: "100vh",
-    paddingTop: theme.spacing(4),
+    alignItems: "center",
+    backgroundImage:
+      "url('http://galena.com/wp-content/uploads/2022/12/Gradient.png')",
+    backgroundPosition: "bottom center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    borderRadius: "0px 0px 80px 0px",
+    color: theme.palette.grey[50],
+    display: "flex",
+    textAlign: "center",
 
-    "& > :not(:last-child)": {
-      marginBottom: theme.spacing(2),
+    [theme.breakpoints.up("md")]: {
+      minHeight: 800,
     },
+  },
+  brandsContainer: {
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+
+    img: {
+      [theme.breakpoints.only("xs")]: {
+        marginBottom: theme.spacing(2),
+        marginTop: theme.spacing(2),
+      },
+    },
+
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
+    },
+  },
+  lastContainer: {
+    alignItems: "center",
+    backgroundImage:
+      "url('http://galena.com/wp-content/uploads/2022/12/Frame-852.jpg')",
+    backgroundPosition: "top center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    color: theme.palette.grey[50],
+    display: "flex",
+
+    [theme.breakpoints.up("md")]: {
+      minHeight: 512,
+    },
+  },
+  section: {
+    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(8),
+  },
+  actionButton: {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.grey[50],
   },
   title: {
     textAlign: "center",
@@ -28,9 +75,6 @@ const useStyles = makeStyles()((theme: Theme) => ({
     "& > :not(:last-child)": {
       marginBottom: theme.spacing(2),
     },
-  },
-  buttonLink: {
-    color: theme.palette.text.primary,
   },
 }));
 

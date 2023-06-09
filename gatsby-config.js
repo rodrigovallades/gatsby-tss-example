@@ -4,6 +4,21 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    // `gatsby-plugin-material-ui`, // <-- delete me! This plugin conflicts with the setup in this project. Make sure not install `gatsby-plugin-material-ui`, or your TSS styles will not load on the server.
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Atkinson Hyperlegible`,
+            file: `https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap`,
+          },
+        ],
+      },
+    },
   ],
 };
