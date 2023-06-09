@@ -17,7 +17,7 @@ const HomeContent = () => {
     <>
       <Container
         maxWidth={false}
-        className={clsx(classes.mainContainer, classes.section)}
+        className={clsx(classes.mainContainer, classes.sectionContainer)}
       >
         <Container maxWidth="md">
           <Box mb={8}>
@@ -34,26 +34,32 @@ const HomeContent = () => {
             Faça parte dessa mudança e saiba como podemos te ajudar a promover o
             desenvolvimento de talentos na sua empresa.
           </Typography>
-          <Box my={4}>
-            <img
-              width="470"
-              height="64"
-              src="https://galena.com/wp-content/uploads/2022/12/Frame-845.svg"
-            />
+          <Box my={6}>
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <img
+                src="https://galena.com/wp-content/uploads/2022/12/Frame-845.svg"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
+            </Box>
+            <Box sx={{ display: { xs: "block", md: "none" } }}>
+              <img
+                src="https://galena.com/wp-content/uploads/2022/12/Frame-845-1.svg"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
+            </Box>
           </Box>
           <Button
             color="inverse"
             endIcon={<LaunchIcon />}
             href="https://www.edupass.io/empresas/"
             size="large"
-            sx={{ mb: 4 }}
             variant="contained"
           >
             Fale conosco e saiba mais
           </Button>
         </Container>
       </Container>
-      <Container maxWidth={false} className={classes.section}>
+      <Container maxWidth={false} className={classes.sectionContainer}>
         <Container>
           <Grid container>
             <Grid xs={12} md={6}>
@@ -83,7 +89,7 @@ const HomeContent = () => {
           </Grid>
         </Container>
       </Container>
-      <Container maxWidth={false} className={classes.section}>
+      <Container maxWidth={false} className={classes.sectionContainer}>
         <Container maxWidth="md">
           <Stack spacing={2} textAlign="center">
             <Typography variant="h2">O que o Edupass faz</Typography>
@@ -114,7 +120,7 @@ const HomeContent = () => {
           </Stack>
         </Container>
       </Container>
-      <Container maxWidth={false} className={classes.section}>
+      <Container maxWidth={false} className={classes.sectionContainer}>
         <Container>
           <Grid container>
             <Grid xs={12} lg={4}>
@@ -150,7 +156,7 @@ const HomeContent = () => {
       </Container>
       <Container
         maxWidth={false}
-        className={clsx(classes.lastContainer, classes.section)}
+        className={clsx(classes.lastContainer, classes.sectionContainer)}
       >
         <Container maxWidth="sm">
           <Stack spacing={6} textAlign="center">

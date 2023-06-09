@@ -50,31 +50,18 @@ const useStyles = makeStyles()((theme: Theme) => ({
       minHeight: 512,
     },
   },
-  section: {
-    paddingBottom: theme.spacing(8),
-    paddingTop: theme.spacing(8),
+  sectionContainer: {
+    paddingBottom: theme.spacing(5),
+    paddingTop: theme.spacing(5),
+
+    [theme.breakpoints.up("sm")]: {
+      paddingBottom: theme.spacing(8),
+      paddingTop: theme.spacing(8),
+    },
   },
   actionButton: {
     color: theme.palette.primary.main,
     backgroundColor: theme.palette.grey[50],
-  },
-  title: {
-    textAlign: "center",
-  },
-  centeredContainer: {
-    display: "flex",
-    justifyContent: "center",
-    textAlign: "center",
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-  },
-  paper: {
-    maxWidth: theme.breakpoints.values.sm,
-    padding: theme.spacing(2),
-
-    "& > :not(:last-child)": {
-      marginBottom: theme.spacing(2),
-    },
   },
 }));
 
