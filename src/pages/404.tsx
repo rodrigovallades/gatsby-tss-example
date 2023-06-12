@@ -6,7 +6,7 @@ import { ThemeWrapper } from "../theme";
 const NotFoundPage = () => {
   return (
     <>
-      <title>404 | TSS and Gatsby</title>
+      <title>404 | Galena + Edupass</title>
 
       <ThemeWrapper>
         <NotFoundPageContent />

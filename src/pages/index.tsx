@@ -6,7 +6,7 @@ import { ThemeWrapper } from "../theme";
 const Home = () => {
   return (
     <>
-      <title>TSS and Gatsby</title>
+      <title>Galena + Edupass</title>
 
       <ThemeWrapper>
         <HomeContent />
