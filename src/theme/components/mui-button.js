@@ -1,3 +1,5 @@
+import { pxToRem } from "../utils";
+
 // Materialize has a bug which applies a button:focus
 // background-color to all buttons, not just the ones scoped to Materialize.
 // We have an issue open at Materialize on Github, but we know
@@ -12,28 +14,34 @@
 const MuiButton = {
   styleOverrides: {
     root: ({ ownerState, theme }) => {
-      let backgroundColor = 'transparent';
+      let backgroundColor = "transparent";
 
-      if (ownerState.variant === 'contained')
+      if (ownerState.variant === "contained")
         backgroundColor = theme.palette[ownerState.color].main;
 
       const minHeights = {
-        small: '32px',
-        medium: '40px',
-        large: '48px'
+        small: "32px",
+        medium: "40px",
+        large: "48px",
+        xlarge: "54px",
       };
 
       return {
         ...{
           borderRadius: theme.spacing(5),
           minHeight: minHeights[ownerState.size],
-          '&&:focus': {
-            backgroundColor
-          }
-        }
+          "&&:focus": {
+            backgroundColor,
+          },
+        },
+        ...(ownerState.size === "xlarge" && {
+          fontSize: pxToRem(22),
+          lineHeight: 1.2,
+          padding: theme.spacing(2, 6),
+        }),
       };
-    }
-  }
+    },
+  },
 };
 
 export default MuiButton;

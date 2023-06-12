@@ -18,10 +18,19 @@ declare module "@mui/material/styles/createPalette" {
   }
 }
 
-// Extend color prop on components
 declare module "@mui/material/Button" {
   export interface ButtonPropsColorOverrides {
     inverse: true;
+  }
+
+  export interface ButtonPropsSizeOverrides {
+    xlarge: true;
+  }
+}
+
+declare module "@mui/material/Typography" {
+  export interface TypographyPropsVariantOverrides {
+    subtitle3: true;
   }
 }
 

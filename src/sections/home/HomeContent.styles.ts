@@ -10,16 +10,17 @@ const useStyles = makeStyles()((theme: Theme) => ({
     backgroundPosition: "bottom center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    borderRadius: "0px 0px 80px 0px",
+    borderRadius: "0px 0px 48px 0px",
     color: theme.palette.grey[50],
     display: "flex",
     textAlign: "center",
 
     [theme.breakpoints.up("md")]: {
+      borderRadius: "0px 0px 80px 0px",
       minHeight: 800,
     },
   },
-  brandsContainer: {
+  investorsContainer: {
     alignItems: "center",
     display: "flex",
     flexDirection: "column",
@@ -35,6 +36,10 @@ const useStyles = makeStyles()((theme: Theme) => ({
     [theme.breakpoints.up("sm")]: {
       flexDirection: "row",
     },
+  },
+  brandsContainer: {
+    backgroundColor: theme.palette.grey[900],
+    color: theme.palette.grey[50],
   },
   lastContainer: {
     alignItems: "center",
