@@ -134,40 +134,6 @@ const HomeContent = () => {
           </Stack>
         </Container>
       </Container>
-      <Container maxWidth={false} className={classes.sectionContainer}>
-        <Container>
-          <Grid container>
-            <Grid xs={12} lg={4}>
-              <Typography
-                variant="h3"
-                sx={{
-                  marginBottom: { xs: 4, lg: "0px" },
-                  textAlign: { xs: "center", lg: "left" },
-                }}
-              >
-                Saiba quais são as empresas que investem no sucesso da galena
-              </Typography>
-            </Grid>
-            <Grid xs={12} lg={8} className={classes.investorsContainer}>
-              <img
-                width="110"
-                height="40"
-                src="https://galena.com/wp-content/uploads/2022/12/altos.svg"
-              />
-              <img
-                width="219"
-                height="40"
-                src="https://galena.com/wp-content/uploads/2022/12/globo.png"
-              />
-              <img
-                width="142"
-                height="40"
-                src="https://galena.com/wp-content/uploads/2022/12/owl.svg"
-              />
-            </Grid>
-          </Grid>
-        </Container>
-      </Container>
       <Container
         maxWidth={false}
         className={clsx(classes.brandsContainer, classes.sectionContainer)}
@@ -306,6 +272,40 @@ const HomeContent = () => {
                   </Item>
                 </Grid>
               </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Container>
+      <Container maxWidth={false} className={classes.sectionContainer}>
+        <Container>
+          <Grid container>
+            <Grid xs={12} lg={4}>
+              <Typography
+                variant="h3"
+                sx={{
+                  marginBottom: { xs: 4, lg: "0px" },
+                  textAlign: { xs: "center", lg: "left" },
+                }}
+              >
+                Saiba quais são as empresas que investem no sucesso da galena
+              </Typography>
+            </Grid>
+            <Grid xs={12} lg={8} className={classes.investorsContainer}>
+              <img
+                width="110"
+                height="40"
+                src="https://galena.com/wp-content/uploads/2022/12/altos.svg"
+              />
+              <img
+                width="219"
+                height="40"
+                src="https://galena.com/wp-content/uploads/2022/12/globo.png"
+              />
+              <img
+                width="142"
+                height="40"
+                src="https://galena.com/wp-content/uploads/2022/12/owl.svg"
+              />
             </Grid>
           </Grid>
         </Container>
